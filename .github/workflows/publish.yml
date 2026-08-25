@@ -1,0 +1,34 @@
+# Place at .github/workflows/publish.yml in the ig-autopost-cloud repo.
+name: publish
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 min, 24/7 (UTC; script works in IST internally)
+  workflow_dispatch: {}
+concurrency:
+  group: publish
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish due items
+        env:
+          META_PUBLISH_TOKEN: ${{ secrets.META_PUBLISH_TOKEN }}
+        run: python3 cloud_publish.py
+      - name: Commit state
+        run: |
+          git config user.name "ig-autopost-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state.json
+          git diff --cached --quiet && exit 0
+          for i in 1 2 3; do
+            git commit -m "state $(date -u +%FT%TZ)" || exit 0
+            git pull --rebase && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          exit 1
