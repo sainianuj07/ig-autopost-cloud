@@ -13,7 +13,7 @@ queue.json format:
 
 Env: META_PUBLISH_TOKEN (repo secret). Times are IST.
 """
-import json, os, sys, time, urllib.parse, urllib.request
+import json, os, subprocess, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -143,6 +143,50 @@ def publish_facebook(acct, item, urls):
     return r.get("post_id") or r.get("id")
 
 
+# The local Mac publisher posts from the same queue every 10 min. Both sides
+# coordinate through this state.json: re-read it (fresh from the remote) right
+# before publishing, and push our result right after, so an item is never
+# posted twice. See publish.py:cloud_record for the other half.
+
+def _git(*args, check=True):
+    return subprocess.run(["git", *args], capture_output=True, text=True,
+                          check=check, timeout=120)
+
+def refresh_state(state):
+    """Pull the newest state from the remote; returns the merged dict."""
+    try:
+        _git("pull", "--rebase", "-q")
+    except Exception as e:
+        log(f"state refresh: pull failed ({e}) — using local copy")
+    try:
+        if os.path.exists(STATE):
+            remote = json.load(open(STATE))
+            for k, v in remote.items():
+                state.setdefault(k, v)
+    except Exception as e:
+        log(f"state refresh: unreadable state.json ({e})")
+    return state
+
+def push_state(state, key):
+    """Publish our result to the remote immediately so the local Mac tick sees
+    it. Best-effort — the workflow's final commit step is the safety net."""
+    json.dump(state, open(STATE, "w"), indent=1)
+    for attempt in range(3):
+        try:
+            _git("config", "user.name", "ig-autopost-bot")
+            _git("config", "user.email", "bot@users.noreply.github.com")
+            _git("add", "state.json")
+            _git("commit", "-q", "-m", f"cloud published {key}")
+            _git("push", "-q")
+            return True
+        except Exception:
+            try:
+                _git("pull", "--rebase", "-q")
+            except Exception:
+                break
+    log(f"state push failed for {key} (final commit step will carry it)")
+    return False
+
 def main():
     if not TOKEN:
         sys.exit("META_PUBLISH_TOKEN not set")
@@ -178,6 +222,11 @@ def main():
         key, want = item["key"], item["ig_username"].lower().lstrip("@")
         if posted:
             time.sleep(MIN_GAP_SEC)
+        # the Mac may have posted this in the meantime — check before sending
+        state = refresh_state(state)
+        if key in state:
+            log(f"SKIP {key}: already published by the local publisher")
+            continue
         if want not in accounts:
             log(f"HOLD {key}: no page with IG @{want} on this token")
             continue
@@ -188,6 +237,7 @@ def main():
                           "at": datetime.now(IST).isoformat(), "by": "cloud"}
             log(f"OK {key}: ig={ig_id} fb={fb_id}")
             posted += 1
+            push_state(state, key)
         except Exception as e:
             tries = state.get(key + "__tries", 0)
             if tries >= 2:
