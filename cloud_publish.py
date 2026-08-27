@@ -22,6 +22,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 QUEUE = os.path.join(HERE, "queue.json")
 STATE = os.path.join(HERE, "state.json")
 MAX_LATE_HOURS = 6
+# Burst guard: when the GitHub schedule stalls for hours, a catch-up run must not
+# dump the whole backlog back-to-back (IG spam standard punishes bursty repetition).
+MAX_PER_RUN = 6
+MIN_GAP_SEC = 150
 TOKEN = os.environ.get("META_PUBLISH_TOKEN", "").strip()
 
 
@@ -164,8 +168,16 @@ def main():
         log("nothing due")
         return
     accounts = resolve_accounts()
-    for item in sorted(due, key=lambda i: i["time"]):
+    due = sorted(due, key=lambda i: i["time"])
+    if len(due) > MAX_PER_RUN:
+        log(f"pacing: {len(due)} due, posting {MAX_PER_RUN} this run, "
+            f"{len(due) - MAX_PER_RUN} deferred to next run")
+        due = due[:MAX_PER_RUN]
+    posted = 0
+    for item in due:
         key, want = item["key"], item["ig_username"].lower().lstrip("@")
+        if posted:
+            time.sleep(MIN_GAP_SEC)
         if want not in accounts:
             log(f"HOLD {key}: no page with IG @{want} on this token")
             continue
@@ -175,6 +187,7 @@ def main():
             state[key] = {"status": "published", "ig_id": ig_id, "fb_id": fb_id,
                           "at": datetime.now(IST).isoformat(), "by": "cloud"}
             log(f"OK {key}: ig={ig_id} fb={fb_id}")
+            posted += 1
         except Exception as e:
             tries = state.get(key + "__tries", 0)
             if tries >= 2:
