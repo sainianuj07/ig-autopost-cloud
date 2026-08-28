@@ -511,8 +511,11 @@
   "by": "local"
  },
  "shribazaar/2026-08-28/s1": {
-  "status": "skipped_too_late",
-  "at": "2026-08-28T16:12:48.484767+05:30"
+  "status": "published",
+  "ig_id": "18117031669936546",
+  "fb_id": "1702002100879047",
+  "at": "2026-08-28T16:53:16.134130+05:30",
+  "by": "local"
  },
  "shribazaar/2026-08-28/s2": {
   "status": "skipped_too_late",
