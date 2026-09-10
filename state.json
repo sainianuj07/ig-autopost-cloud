@@ -1015,5 +1015,12 @@
  "bagiya/2026-09-10/p2": {
   "status": "held_manual",
   "why": "herbicide-only catalog from Sep 10 evening"
+ },
+ "shribazaar/2026-09-10/s7": {
+  "status": "published",
+  "ig_id": "17877246831549302",
+  "fb_id": "3205437456313296",
+  "at": "2026-09-10T22:36:37.977742+05:30",
+  "by": "cloud"
  }
 }
