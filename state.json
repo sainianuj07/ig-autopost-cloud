@@ -1007,5 +1007,13 @@
   "fb_id": "1400589591600819",
   "at": "2026-09-10T19:34:39.039034+05:30",
   "by": "local"
+ },
+ "bagiya/2026-09-10/p7": {
+  "status": "held_manual",
+  "why": "herbicide-only catalog from Sep 10 evening"
+ },
+ "bagiya/2026-09-10/p2": {
+  "status": "held_manual",
+  "why": "herbicide-only catalog from Sep 10 evening"
  }
 }
