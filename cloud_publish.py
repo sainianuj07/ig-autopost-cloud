@@ -59,13 +59,22 @@ def api(path, params=None, post=False, tok=None, retries=3):
 
 
 def resolve_accounts():
-    res = api("me/accounts", {"fields": "id,name,access_token,instagram_business_account{id,username}", "limit": "100"})
+    # Main token + any META_PUBLISH_TOKEN_<BRAND> secrets (a brand whose Page
+    # sits in another Meta business needs its own System-User token).
+    toks = [TOKEN] + [v.strip() for k, v in os.environ.items()
+                      if k.startswith("META_PUBLISH_TOKEN_") and v.strip()]
     out = {}
-    for page in res.get("data", []):
-        ig = page.get("instagram_business_account") or {}
-        if ig.get("username"):
-            out[ig["username"].lower()] = {"ig_user_id": ig["id"], "page_id": page["id"],
-                                           "page_token": page["access_token"]}
+    for tok in toks:
+        try:
+            res = api("me/accounts", {"fields": "id,name,access_token,instagram_business_account{id,username}", "limit": "100"}, tok=tok)
+        except Exception as e:
+            log(f"WARN: /me/accounts failed for one token: {e}")
+            continue
+        for page in res.get("data", []):
+            ig = page.get("instagram_business_account") or {}
+            if ig.get("username"):
+                out.setdefault(ig["username"].lower(), {"ig_user_id": ig["id"], "page_id": page["id"],
+                                                        "page_token": page["access_token"]})
     return out
 
 

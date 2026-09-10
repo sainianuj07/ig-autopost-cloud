@@ -21,6 +21,7 @@ jobs:
       - name: Publish due items
         env:
           META_PUBLISH_TOKEN: ${{ secrets.META_PUBLISH_TOKEN }}
+          META_PUBLISH_TOKEN_BAGIYA: ${{ secrets.META_PUBLISH_TOKEN_BAGIYA }}
         run: python3 cloud_publish.py
       - name: Commit state
         run: |
