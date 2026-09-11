@@ -3812,5 +3812,13 @@
   "fb_id": "1437325064914680",
   "at": "2026-09-11T11:34:04.266364+05:30",
   "by": "local"
+ },
+ "bagiya/2026-09-11/p4": {
+  "status": "held_manual",
+  "why": "replaced by diagram-explainer d1/d2 (user, Sep 11)"
+ },
+ "bagiya/2026-09-11/p7": {
+  "status": "held_manual",
+  "why": "replaced by diagram-explainer d1/d2 (user, Sep 11)"
  }
 }
