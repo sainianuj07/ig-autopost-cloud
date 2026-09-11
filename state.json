@@ -3820,5 +3820,12 @@
  "bagiya/2026-09-11/p7": {
   "status": "held_manual",
   "why": "replaced by diagram-explainer d1/d2 (user, Sep 11)"
+ },
+ "bagiya/2026-09-11/s1": {
+  "status": "published",
+  "ig_id": "17911547295524043",
+  "fb_id": "1049786221264431",
+  "at": "2026-09-11T11:35:55.681921+05:30",
+  "by": "local"
  }
 }
