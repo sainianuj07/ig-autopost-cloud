@@ -2692,17 +2692,17 @@
  "shribazaar/2026-09-06/p2__tries": 1,
  "shribazaar/2026-09-06/s1": {
   "status": "failed",
-  "error": "shopify push failed: unk-K63FW7Q7.js:1)                                                       │\n│    at async un (Users/admin/.local/node/lib/node_modules/@shopify/cli/dist/  │\n│    chunk-K63FW7Q7.js:1)                                                      │\n│                                         ",
+  "error": "shopify push failed: unk-K63FW7Q7.js:1)                                                       \u2502\n\u2502    at async un (Users/admin/.local/node/lib/node_modules/@shopify/cli/dist/  \u2502\n\u2502    chunk-K63FW7Q7.js:1)                                                      \u2502\n\u2502                                         ",
   "at": "2026-09-06T15:01:40.015869+05:30"
  },
  "shribazaar/2026-09-06/s2": {
   "status": "failed",
-  "error": "shopify push failed: unk-P5WLH64A.js:1)                                                       │\n│    at async Z (Users/admin/.local/node/lib/node_modules/@shopify/cli/dist/c  │\n│    hunk-26DH5P7S.js:5)                                                       │\n│                                         ",
+  "error": "shopify push failed: unk-P5WLH64A.js:1)                                                       \u2502\n\u2502    at async Z (Users/admin/.local/node/lib/node_modules/@shopify/cli/dist/c  \u2502\n\u2502    hunk-26DH5P7S.js:5)                                                       \u2502\n\u2502                                         ",
   "at": "2026-09-06T15:01:44.824044+05:30"
  },
  "shribazaar/2026-09-06/s3": {
   "status": "failed",
-  "error": "shopify push failed: unk-K63FW7Q7.js:1)                                                       │\n│    at async hn (Users/admin/.local/node/lib/node_modules/@shopify/cli/dist/  │\n│    chunk-K63FW7Q7.js:1)                                                      │\n│                                         ",
+  "error": "shopify push failed: unk-K63FW7Q7.js:1)                                                       \u2502\n\u2502    at async hn (Users/admin/.local/node/lib/node_modules/@shopify/cli/dist/  \u2502\n\u2502    chunk-K63FW7Q7.js:1)                                                      \u2502\n\u2502                                         ",
   "at": "2026-09-06T15:01:51.516706+05:30"
  },
  "shribazaar/2026-09-06/p2": {
