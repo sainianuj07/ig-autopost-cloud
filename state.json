@@ -4657,5 +4657,21 @@
   "fb_id": "1247106447559268",
   "at": "2026-09-14T12:30:53.963019+05:30",
   "by": "local"
+ },
+ "valora/2026-09-14/s2": {
+  "status": "stopped_brand_paused",
+  "at": "2026-09-14T12:41:23"
+ },
+ "valora/2026-09-14/p2": {
+  "status": "stopped_brand_paused",
+  "at": "2026-09-14T12:41:23"
+ },
+ "valora/2026-09-14/p3": {
+  "status": "stopped_brand_paused",
+  "at": "2026-09-14T12:41:23"
+ },
+ "valora/2026-09-14/s3": {
+  "status": "stopped_brand_paused",
+  "at": "2026-09-14T12:41:23"
  }
 }
