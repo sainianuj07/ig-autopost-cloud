@@ -7339,5 +7339,56 @@
   "fb_id": "1442182211129683",
   "at": "2026-09-28T21:05:43.208156+05:30",
   "by": "local"
+ },
+ "shribazaar/2026-09-28/p1": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/s1": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/s2": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/s3": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/p2": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/p3": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/p4": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "bagiya/2026-09-28/p1": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "bagiya/2026-09-28/s1": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "bagiya/2026-09-28/p2": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "bagiya/2026-09-28/s2": {
+  "status": "skipped_too_late",
+  "at": "2026-09-29T00:06:38.808977+05:30"
+ },
+ "shribazaar/2026-09-28/p14": {
+  "status": "published",
+  "ig_id": "18339085306282810",
+  "fb_id": "1579243380151263",
+  "at": "2026-09-29T00:07:19.336773+05:30",
+  "by": "cloud"
  }
 }
