@@ -6692,6 +6692,22 @@
   "ig_id": "18116126492052603",
   "status": "published"
  },
+ "shribazaar/2026-09-30/p11": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
+ },
+ "shribazaar/2026-09-30/p12": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
+ },
+ "shribazaar/2026-09-30/p13": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
+ },
+ "shribazaar/2026-09-30/p14": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
+ },
  "shribazaar/2026-09-30/p2": {
   "at": "2026-09-30T11:15:54.896450+05:30",
   "by": "local",
@@ -6705,6 +6721,21 @@
   "fb_id": "1206366852562340_122121396951401981",
   "ig_id": "18124821949678026",
   "status": "published"
+ },
+ "shribazaar/2026-09-30/p4": {
+  "at": "2026-09-30T12:00:41.333473+05:30",
+  "by": "local",
+  "fb_id": "1101948309490450",
+  "ig_id": "18390833854205527",
+  "status": "published"
+ },
+ "shribazaar/2026-09-30/p8": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
+ },
+ "shribazaar/2026-09-30/p9": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
  },
  "shribazaar/2026-09-30/s1": {
   "at": "2026-09-30T10:59:24.023603+05:30",
@@ -6726,6 +6757,14 @@
   "fb_id": "2350533682152536",
   "ig_id": "17950291884273102",
   "status": "published"
+ },
+ "shribazaar/2026-09-30/s7": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
+ },
+ "shribazaar/2026-09-30/s8": {
+  "note": "replaced Sep 30 by launch-day item for the 4 new products",
+  "status": "held_manual"
  },
  "valora/2026-08-19/p1": {
   "at": "2026-08-19T13:53:24.445113+05:30",
@@ -7712,12 +7751,5 @@
  "valora/2026-09-14/s3": {
   "at": "2026-09-14T12:41:23",
   "status": "stopped_brand_paused"
- },
- "shribazaar/2026-09-30/p4": {
-  "status": "published",
-  "ig_id": "18390833854205527",
-  "fb_id": "1101948309490450",
-  "at": "2026-09-30T12:00:41.333473+05:30",
-  "by": "local"
  }
 }
