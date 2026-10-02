@@ -8290,5 +8290,89 @@
   "fb_id": "1080208191588311",
   "at": "2026-10-03T00:20:04.437187+05:30",
   "by": "local"
+ },
+ "shribazaar/2026-10-02/p1": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/s1": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/s2": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/s3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p2": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p4": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p5": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p6": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/s4": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/s5": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/s6": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p7": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "shribazaar/2026-10-02/p8": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/p1": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/s1": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/p2": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/s2": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/p3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/p4": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
+ },
+ "bagiya/2026-10-02/s3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-03T01:38:19.807150+05:30"
  }
 }
