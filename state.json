@@ -8465,5 +8465,72 @@
   "fb_id": "1640873674079872",
   "at": "2026-10-04T22:16:15.245077+05:30",
   "by": "local"
+ },
+ "shribazaar/2026-10-04/p1": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/s1": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/s2": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/s3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/p2": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/p3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/p4": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/p5": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/p6": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/s4": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/s5": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/s6": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "shribazaar/2026-10-04/p7": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "bagiya/2026-10-04/p4": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "bagiya/2026-10-04/s3": {
+  "status": "skipped_too_late",
+  "at": "2026-10-04T22:21:20.662013+05:30"
+ },
+ "bagiya/2026-10-04/p7": {
+  "status": "published",
+  "ig_id": "18117860200968346",
+  "fb_id": "1969600600391186",
+  "at": "2026-10-04T22:22:19.854610+05:30",
+  "by": "cloud"
  }
 }
